@@ -13,9 +13,9 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.stereotype.Service;
 
 /**
- * Created on Ağustos, 2020
+ * Created on Nov, 2024
  *
- * @author Faruk
+ * @author Quoc Bui
  */
 @Slf4j
 @Service

@@ -10,9 +10,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * Created on Ağustos, 2020
+ * Created on Nov, 2024
  *
- * @author Faruk
+ * @author Quoc Bui
  */
 @RestController
 @RequiredArgsConstructor

@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import java.time.LocalDateTime;
 
 /**
- * Created on Ağustos, 2020
+ * Created on Nov, 2024
  *
- * @author Faruk
+ * @author Quoc Bui
  */
 @RestControllerAdvice(basePackageClasses = RegistrationController.class)
 public class RegistrationControllerAdvice {

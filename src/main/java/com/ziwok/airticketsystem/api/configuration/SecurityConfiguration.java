@@ -14,9 +14,9 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 /**
- * Created on Ağustos, 2020
+ * Created on Nov, 2024
  *
- * @author Faruk
+ * @author Quoc Bui
  */
 @Configuration
 @RequiredArgsConstructor

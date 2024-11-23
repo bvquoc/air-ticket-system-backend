@@ -1,9 +1,9 @@
 package com.ziwok.airticketsystem.api.model;
 
 /**
- * Created on Ağustos, 2020
+ * Created on Nov, 2024
  *
- * @author Faruk
+ * @author Quoc Bui
  */
 public enum UserRole {
 

@@ -8,9 +8,9 @@ import java.util.Locale;
 import java.util.Objects;
 
 /**
- * Created on Ağustos, 2020
+ * Created on Nov, 2024
  *
- * @author Faruk
+ * @author Quoc Bui
  */
 @Service
 public class GeneralMessageAccessor {

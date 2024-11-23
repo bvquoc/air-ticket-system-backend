@@ -12,9 +12,9 @@ import org.springframework.stereotype.Component;
 import java.util.Date;
 
 /**
- * Created on Ağustos, 2020
+ * Created on Nov, 2024
  *
- * @author Faruk
+ * @author Quoc Bui
  */
 @Component
 @RequiredArgsConstructor

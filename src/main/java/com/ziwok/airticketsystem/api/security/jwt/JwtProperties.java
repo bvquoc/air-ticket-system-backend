@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * Created on October, 2022
  *
- * @author Faruk
+ * @author Quoc Bui
  */
 
 @Getter

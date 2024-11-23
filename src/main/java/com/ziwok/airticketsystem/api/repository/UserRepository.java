@@ -4,9 +4,9 @@ import com.ziwok.airticketsystem.api.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
- * Created on Ağustos, 2020
+ * Created on Nov, 2024
  *
- * @author Faruk
+ * @author Quoc Bui
  */
 public interface UserRepository extends JpaRepository<User, Long> {
 

@@ -17,9 +17,9 @@ import org.springframework.context.annotation.Configuration;
 import static io.swagger.v3.oas.models.security.SecurityScheme.Type.HTTP;
 
 /**
- * Created on Ağustos, 2020
+ * Created on Nov, 2024
  *
- * @author Faruk
+ * @author Quoc Bui
  */
 @Getter
 @Setter

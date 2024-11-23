@@ -6,9 +6,9 @@ import com.ziwok.airticketsystem.api.security.dto.RegistrationRequest;
 import com.ziwok.airticketsystem.api.security.dto.RegistrationResponse;
 
 /**
- * Created on Ağustos, 2020
+ * Created on Nov, 2024
  *
- * @author Faruk
+ * @author Quoc Bui
  */
 public interface UserService {
 
