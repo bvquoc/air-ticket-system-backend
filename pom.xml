@@ -9,8 +9,8 @@
         <version>3.3.1</version>
     </parent>
 
-    <groupId>com.farukgenc</groupId>
-    <artifactId>springboot-boilerplate</artifactId>
+    <groupId>com.ziwok</groupId>
+    <artifactId>air-ticket-system-api</artifactId>
     <version>3.3.1</version>
 
     <name>spring-boot-boilerplate</name>
@@ -21,9 +21,9 @@
 
     <developers>
         <developer>
-            <name>Faruk Genc</name>
-            <email>omer@farukgenc.com</email>
-            <url>https://farukgenc.com</url>
+            <name>Quoc Bui</name>
+            <email>bvquoc.dev@gmail.com</email>
+            <url>https://quoc-bui.engineer</url>
         </developer>
     </developers>
 
