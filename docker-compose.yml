@@ -1,15 +1,22 @@
-services:
+version: '3.8'
 
-  db:
-    container_name: db
-    image: postgres
-    restart: always
-    ports:
-      - "5432:5432"
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql_db
     environment:
-      POSTGRES_PASSWORD: example
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
+      MYSQL_ROOT_PASSWORD: 123456         # Root password for MySQL
+      MYSQL_DATABASE: airticketsystem     # Create this database on initialization
+      MYSQL_USER: bvquoc                 # Create this user
+      MYSQL_PASSWORD: 123456             # Password for the above user
+    volumes:
+      - ./sql/init.sql:/docker-entrypoint-initdb.d/init.sql   # Initialize DB with SQL script
+    ports:
+      - "3306:3306"                        # Expose MySQL on the host machine's port 3306
+    networks:
+      - mysql_network
+    restart: always
+
+networks:
+  mysql_network:
+    driver: bridge

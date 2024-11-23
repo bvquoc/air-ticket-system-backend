@@ -4,14 +4,14 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://${POSTGRES_DB_SERVER_ADDRESS:localhost}:${POSTGRES_DB_SERVER_PORT:5432}/
-    username: ${POSTGRES_USER:postgres}
-    password: ${POSTGRES_PASSWORD:example}
+    url: jdbc:mysql://${MYSQL_DB_SERVER_ADDRESS:localhost}:${MYSQL_DB_SERVER_PORT:3306}/airticketsystem
+    username: ${MYSQL_USER:bvquoc}
+    password: ${MYSQL_PASSWORD:123456}
     hikari:
       pool-name: AirTicketSystemHikariPool
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: create  # Options: none, update, create, create-drop
     open-in-view: false
   jta:
     enabled: false
@@ -32,8 +32,8 @@ management:
 
 logging:
   level:
-    org.springframework: INFO
-    com.ziwok.airticketsystem.api: INFO
+    org.springframework: DEBUG
+    com.ziwok.airticketsystem.api: DEBUG
 
 ## FIXME : Customize JWT token and Swagger information for your application
 

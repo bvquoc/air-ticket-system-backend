@@ -3,12 +3,6 @@ package com.ziwok.airticketsystem.api.model;
 import jakarta.persistence.*;
 import lombok.*;
 
-
-/**
- * Created on Nov, 2024
- *
- * @author Quoc Bui
- */
 @Getter
 @Setter
 @Entity
@@ -22,16 +16,17 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	private String name;
-
 	@Column(unique = true)
-	private String username;
+	private String email;
+
+	private String name;
 
 	private String password;
 
-	private String email;
-
 	@Enumerated(EnumType.STRING)
+	@Column(nullable = false)
 	private UserRole userRole;
 
+	@Column(unique = true, nullable = false)
+	private String username;
 }

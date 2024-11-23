@@ -73,8 +73,9 @@
         </dependency>
 
         <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.33</version> <!-- Use a stable version of the MySQL Connector/J -->
             <scope>runtime</scope>
         </dependency>
 
