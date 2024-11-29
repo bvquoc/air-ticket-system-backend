@@ -1,4 +1,4 @@
-# Flight Booking System (draft)
+# Flight Booking System (draft) 
 ## REST API Documentation (v1)
 ### Search Flights
 #### Step 1: Get airports to show Departure and Destination list
