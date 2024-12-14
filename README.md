@@ -7,17 +7,17 @@
 
 ##### Parameters
 
-> | name      |  type     | data type               | description                                                           |
-> |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | departureCode      |  optional | char(3)   | When show Destination list, pass this params to remove Departure  |
+> | name          | type     | data type | description                                                      |
+> |---------------|----------|-----------|------------------------------------------------------------------|
+> | departureCode | optional | char(3)   | When show Destination list, pass this params to remove Departure |
 
 
 ##### Responses
 
-> | http code     | content-type                      | response                                                            |
-> |---------------|-----------------------------------|---------------------------------------------------------------------|
-> | `200`         | `application/json`                | `{"code":"200","message":"success","data": airportsData}`              |
-> | `400`         | `application/json`                | `{"code":"400","message":"Bad Request", "data": null}`                            |
+> | http code | content-type       | response                                                  |
+> |-----------|--------------------|-----------------------------------------------------------|
+> | `200`     | `application/json` | `{"code":"200","message":"success","data": airportsData}` |
+> | `400`     | `application/json` | `{"code":"400","message":"Bad Request", "data": null}`    |
 
 ##### Example cURL
 
@@ -51,24 +51,24 @@
 ```
 </details>
 
-#### Step 2: Get cheapest prices for each day base on Departure, Destination, Date
+#### Step 2: Get the cheapest prices for each day base on Departure, Destination, Date
 <details>
 <summary><code>GET</code> <code><b>/search-service/v1/cheapest-prices?flight=&date=</b></code></summary>
 
 ##### Parameters
 
-> | name      |  type     | data type               | description                                                           |
-> |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | flight      |  required | char(3)-char(3)   | flight=DepartureCode-DestinationCode or DestinationCode-DepartureCode |
-> | date      |  required | DateTime   | Show all cheapest day prices of a month (Ex: Date=2024-11-16, show all cheapest prices of November 2024, from 16th to 30th)  |
+> | name   | type     | data type       | description                                                                                                                 |
+> |--------|----------|-----------------|-----------------------------------------------------------------------------------------------------------------------------|
+> | flight | required | char(3)-char(3) | flight=DepartureCode-DestinationCode or DestinationCode-DepartureCode                                                       |
+> | date   | required | DateTime        | Show all cheapest day prices of a month (Ex: Date=2024-11-16, show all cheapest prices of November 2024, from 16th to 30th) |
 
 
 ##### Responses
 
-> | http code     | content-type                      | response                                                            |
-> |---------------|-----------------------------------|---------------------------------------------------------------------|
-> | `200`         | `application/json`                | `{"code":"200","message":"success","data": cheapestPrices}`              |
-> | `400`         | `application/json`                | `{"code":"400","message":"Bad Request", "data": null}`                            |
+> | http code | content-type       | response                                                    |
+> |-----------|--------------------|-------------------------------------------------------------|
+> | `200`     | `application/json` | `{"code":"200","message":"success","data": cheapestPrices}` |
+> | `400`     | `application/json` | `{"code":"400","message":"Bad Request", "data": null}`      |
 
 ##### Example cURL
 
@@ -97,7 +97,7 @@
     {
       "date": "2024-11-30",
       "cheapestPrice": 510000
-    },
+    }
   ]
 }
 ```
@@ -109,19 +109,19 @@
 
 ##### Parameters
 
-> | name      |  type     | data type               | description                                                           |
-> |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | flight      |  required | char(3)-char(3)   | flight=DepartureCode-DestinationCode or DestinationCode-DepartureCode |
-> | date      |  required | DateTime   | Show all prices of date  |
-> | amount      |  required | int   | Check available seats (if available seats < passenger amount, return disabled=true)  |
+> | name   | type     | data type       | description                                                                         |
+> |--------|----------|-----------------|-------------------------------------------------------------------------------------|
+> | flight | required | char(3)-char(3) | flight=DepartureCode-DestinationCode or DestinationCode-DepartureCode               |
+> | date   | required | DateTime        | Show all prices of date                                                             |
+> | amount | required | int             | Check available seats (if available seats < passenger amount, return disabled=true) |
 
 
 ##### Responses
 
-> | http code     | content-type                      | response                                                            |
-> |---------------|-----------------------------------|---------------------------------------------------------------------|
-> | `200`         | `application/json`                | `{"code":"200","message":"success","data": prices}`              |
-> | `400`         | `application/json`                | `{"code":"400","message":"Bad Request", "data": null}`                            |
+> | http code | content-type       | response                                               |
+> |-----------|--------------------|--------------------------------------------------------|
+> | `200`     | `application/json` | `{"code":"200","message":"success","data": prices}`    |
+> | `400`     | `application/json` | `{"code":"400","message":"Bad Request", "data": null}` |
 
 ##### Example cURL
 
@@ -203,18 +203,18 @@
 
 ##### Payload
 
-> | name      |  type     | data type               | description                                                           |
-> |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | flightCode      |  required | char(5)   |  |
-> | class      |  required | enum   | business,boss,delux,eco  |
-> | passengers      |  required | array   | {firstName, lastName, DOB, gender, phone, email} |
+> | name       | type     | data type | description                                      |
+> |------------|----------|-----------|--------------------------------------------------|
+> | flightCode | required | char(5)   |                                                  |
+> | class      | required | enum      | business,boss,delux,eco                          |
+> | passengers | required | array     | {firstName, lastName, DOB, gender, phone, email} |
 
 ##### Responses
 
-> | http code     | content-type                      | response                                                            |
-> |---------------|-----------------------------------|---------------------------------------------------------------------|
-> | `200`         | `application/json`                | `{"code":"200","message":"success", "data": bookingId}`              |
-> | `400`         | `application/json`                | `{"code":"400","message":"Bad Request", "data": null}`                            |
+> | http code | content-type       | response                                                |
+> |-----------|--------------------|---------------------------------------------------------|
+> | `200`     | `application/json` | `{"code":"200","message":"success", "data": bookingId}` |
+> | `400`     | `application/json` | `{"code":"400","message":"Bad Request", "data": null}`  |
 
 ##### Example cURL
 
@@ -233,8 +233,8 @@ payload: {
   },
   "passengers": [
     {
-      "firstName": "Tuong",
-      "lastName": "Huynh",
+      "firstName": "Quoc",
+      "lastName": "Bui",
       "DOB": "1992-01-01",
       "gender": "male",
       "phone": 0908347817,
@@ -262,18 +262,18 @@ response: {
 
 ##### Headers
 
-> | name      |  type     | data type               | description                                                           |
-> |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | Authorization      |  required | string   | Bearer token  |
+> | name          | type     | data type | description  |
+> |---------------|----------|-----------|--------------|
+> | Authorization | required | string    | Bearer token |
 
 
 ##### Responses
 
-> | http code     | content-type                      | response                                                            |
-> |---------------|-----------------------------------|---------------------------------------------------------------------|
-> | `200`         | `application/json`                | `{"code":"200","message":"success","data": bookings}`              |
-> | `400`         | `application/json`                | `{"code":"400","message":"Bad Request", "data": null}`                            |
-> | `401`         | `application/json`                | `{"code":"401","message":"Unauthorized", "data": null}`                            |
+> | http code | content-type       | response                                                |
+> |-----------|--------------------|---------------------------------------------------------|
+> | `200`     | `application/json` | `{"code":"200","message":"success","data": bookings}`   |
+> | `400`     | `application/json` | `{"code":"400","message":"Bad Request", "data": null}`  |
+> | `401`     | `application/json` | `{"code":"401","message":"Unauthorized", "data": null}` |
 
 ##### Example cURL
 
@@ -295,7 +295,7 @@ response: {
         "departureTime": "2024-11-16 22:20:00",
         "arrivalTime": "2024-11-17 00:30:00",
         "class": "delux",
-        "totalPrice": 790000,
+        "totalPrice": 790000
       },
       "return": {
         "flightCode": "VJ199",
@@ -304,12 +304,12 @@ response: {
         "departureTime": "2024-11-18 22:20:00",
         "arrivalTime": "2024-11-19 00:30:00",
         "class": "delux",
-        "totalPrice": 890000,
+        "totalPrice": 890000
       },
       "passengers": [
         {
-          "firstName": "Tuong",
-          "lastName": "Huynh",
+          "firstName": "Quoc",
+          "lastName": "Bui",
           "DOB": "1992-01-01",
           "gender": "male",
           "phone": 0908347817,
@@ -317,7 +317,7 @@ response: {
         }
       ],
       "total": 1680000,
-      "createdDate": "2024-11-15",
+      "createdDate": "2024-11-15"
     }
   ]
 }
@@ -330,20 +330,20 @@ response: {
 
 ##### Headers
 
-> | name      |  type     | data type               | description                                                           |
-> |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | Authorization      |  required | string   | Bearer token  |
+> | name          | type     | data type | description  |
+> |---------------|----------|-----------|--------------|
+> | Authorization | required | string    | Bearer token |
 
 
 ##### Responses
 
-> | http code     | content-type                      | response                                                            |
-> |---------------|-----------------------------------|---------------------------------------------------------------------|
-> | `200`         | `application/json`                | `{"code":"200","message":"success","data": bookings}`              |
-> | `400`         | `application/json`                | `{"code":"400","message":"Bad Request", "data": null}`                            |
-> | `401`         | `application/json`                | `{"code":"401","message":"Unauthorized", "data": null}`                            |
-> | `403`         | `application/json`                | `{"code":"403","message":"Forbidden", "data": null}`                            |
-> | `404`         | `application/json`                | `{"code":"404","message":"Booking not found", "data": null}`                            |
+> | http code | content-type       | response                                                     |
+> |-----------|--------------------|--------------------------------------------------------------|
+> | `200`     | `application/json` | `{"code":"200","message":"success","data": bookings}`        |
+> | `400`     | `application/json` | `{"code":"400","message":"Bad Request", "data": null}`       |
+> | `401`     | `application/json` | `{"code":"401","message":"Unauthorized", "data": null}`      |
+> | `403`     | `application/json` | `{"code":"403","message":"Forbidden", "data": null}`         |
+> | `404`     | `application/json` | `{"code":"404","message":"Booking not found", "data": null}` |
 
 ##### Example cURL
 
@@ -358,8 +358,8 @@ response: {
   "data": [
     {
       "id": "10b30cf4-d14f-41d0-97f8-e21ea4c9861c",
-      "firstName": "Tuong",
-      "lastName": "Huynh",
+      "firstName": "Quoc",
+      "lastName": "Bui",
       "gender": "male",
       "flightCode": "VJ198",
       "departure": "Tp. Hồ Chí Minh",
@@ -371,8 +371,8 @@ response: {
     },
     {
       "id": "20b30cf4-d14f-41d0-97f8-e21ea4c9861c",
-      "firstName": "Tuong",
-      "lastName": "Huynh",
+      "firstName": "Quoc",
+      "lastName": "Bui",
       "gender": "male",
       "flightCode": "VJ199",
       "departure": "Hà Nội",
