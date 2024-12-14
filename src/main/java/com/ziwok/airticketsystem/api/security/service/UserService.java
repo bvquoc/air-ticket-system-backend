@@ -12,10 +12,10 @@ import com.ziwok.airticketsystem.api.security.dto.RegistrationResponse;
  */
 public interface UserService {
 
-	User findByUsername(String username);
+	User findByEmail(String email);
 
 	RegistrationResponse registration(RegistrationRequest registrationRequest);
 
-	AuthenticatedUserDto findAuthenticatedUserByUsername(String username);
+	AuthenticatedUserDto findAuthenticatedUserByEmail(String email);
 
 }
